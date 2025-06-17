@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+/* --- עיצוב גלובלי ואמין ל-WebView --- */
+html, body {
+  height: 100%; /* גורם להם לתפוס את כל גובה ה-WebView */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* מונע גלילה מיותרת */
+}
+
+body {
+  background-color: #0d1b2a; /* צבע הרקע הכהה */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  /* שימוש ב-flexbox כדי למרכז את התוכן */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

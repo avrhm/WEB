@@ -1,47 +1,37 @@
-/* --- עיצוב כללי לעמוד --- */
-:host {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #0d1b2a; /* רקע כחול-נייבי כהה מאוד */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
-/* --- עיצוב הקונטיינר המרכזי --- */
+
+/* --- עיצוב הקונטיינר המרכזי (נשאר כמעט זהה) --- */
 .container {
-  background-color: #1b263b; /* רקע כחול-אפרפר, מעט יותר בהיר מהרקע הכללי */
+  background-color: #1b263b;
   padding: 30px 40px;
   border-radius: 8px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
   text-align: center;
-  border: 1px solid #415a77; /* מסגרת עדינה להדגשה */
+  border: 1px solid #415a77;
   width: 90%;
   max-width: 550px;
 }
 
-/* --- עיצוב הכותרת הראשית (h1) --- */
+/* שאר העיצובים של h1, p, button נשארים זהים לקודם */
 h1 {
-  color: #ffffff; /* צבע לבן לנראות מקסימלית */
-  font-size: 2.2rem; /* גודל פונט גדול ובולט */
+  color: #ffffff;
+  font-size: 2.2rem;
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 12px;
-  text-transform: uppercase; /* הופך את כל האותיות לגדולות למראה רשמי */
-  letter-spacing: 1.5px; /* ריווח קל בין האותיות */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
-/* --- עיצוב טקסט הפסקה (p) --- */
 p {
-  color: #e0e1dd; /* צבע אפרפר-בהיר, פחות בולט מהכותרת */
+  color: #e0e1dd;
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 35px;
 }
 
-/* --- עיצוב הכפתור --- */
 button {
-  background-color: #3a86ff; /* כחול "רויאל" בוהק כדי למשוך תשומת לב */
+  background-color: #3a86ff;
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -53,8 +43,7 @@ button {
   box-shadow: 0 4px 10px rgba(58, 134, 255, 0.3);
 }
 
-/* --- עיצוב הכפתור במעבר עכבר (hover) --- */
 button:hover {
-  background-color: #2a71e0; /* גוון מעט יותר כהה במעבר עכבר */
-  transform: translateY(-2px); /* אפקט קפיצה קטן */
+  background-color: #2a71e0;
+  transform: translateY(-2px);
 }
