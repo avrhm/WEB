@@ -1,30 +1,25 @@
-/* --- עיצוב גלובלי ואמין ל-WebView --- */
+/* --- עיצוב חדש, פשוט ואמין --- */
 html, body {
   height: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: #0d1b2a; /* צבע הרקע נשאר כאן */
+  background-color: #0d1b2a;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box; /* חשוב מאוד כדי שה-padding לא ישבור את הגובה */
 }
 
-/* הסרנו את כל הגדרות ה-flexbox מה-body.
-   הוא משמש עכשיו רק כ"קנבס" ריק. 
-*/
 body {
-  position: relative; /* חשוב כדי שהמיקום של ה-container יהיה יחסי אליו */
+  /* נותן ריפוד פנימי כדי לדחוף את התוכן מהקצוות */
+  padding: 60px 20px; 
 }
 
-/* --- שיטת המרכוז החדשה והאמינה --- */
+/* --- קונטיינר פשוט ללא מיקום מיוחד --- */
 .container {
-  /* מיקום אבסולוטי במרכז המדויק של המסך */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* מרכוז אופקי בלבד */
+  margin: 0 auto;
 
-  /* שאר העיצובים נשארים זהים */
+  /* עיצובים קוסמטיים שנשארים */
   background-color: #1b263b;
   padding: 30px 40px;
   border-radius: 8px;
