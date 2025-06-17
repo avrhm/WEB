@@ -1,72 +1,13 @@
-/* --- עיצוב גלובלי ואמין ל-WebView --- */
-html, body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #0d1b2a; /* צבע הרקע נשאר כאן */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* הסרנו את כל הגדרות ה-flexbox מה-body.
-   הוא משמש עכשיו רק כ"קנבס" ריק. 
-*/
 body {
-  position: relative; /* חשוב כדי שהמיקום של ה-container יהיה יחסי אליו */
+  background-color: black; /* רקע שחור כדי שהבדיקה תהיה ברורה */
 }
 
-/* --- שיטת המרכוז החדשה והאמינה --- */
-.container {
-  /* מיקום אבסולוטי במרכז המדויק של המסך */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  /* שאר העיצובים נשארים זהים */
-  background-color: #1b263b;
-  padding: 30px 40px;
-  border-radius: 8px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+.test-box {
+  background-color: red; /* רקע אדום שאי אפשר לפספס */
+  color: white;
+  padding: 40px;
+  margin-top: 50px; /* דוחף את התיבה 50 פיקסלים מלמעלה */
   text-align: center;
-  border: 1px solid #415a77;
-  width: 90%;
-  max-width: 550px;
-}
-
-/* שאר הכללים (h1, p, button) נשארים ללא שינוי */
-h1 {
-  color: #ffffff;
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 12px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-}
-
-p {
-  color: #e0e1dd;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 35px;
-}
-
-button {
-  background-color: #3a86ff;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  padding: 14px 28px;
-  font-size: 1.1rem;
+  font-size: 24px;
   font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  box-shadow: 0 4px 10px rgba(58, 134, 255, 0.3);
-}
-
-button:hover {
-  background-color: #2a71e0;
-  transform: translateY(-2px);
 }
