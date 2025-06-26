@@ -15,11 +15,15 @@ declare const Android: any;
 export class AppComponent {
   title = 'my-webview-appcd';
 
+  metadata: string | null = null; // משתנה לאחסון המטא-דאטה שהתקבל
+  cameraMessage: string | null = null; // משתנה להצגת הודעות מהמצלמה
+
   constructor() {
     // חשיפת הפונקציות לאובייקט window כדי שקוד ה-Kotlin יוכל לקרוא להן
     // bind(this) מבטיח שהקונטקסט (this) בתוך הפונקציה יהיה של הקומפוננטה.
     (window as any).onCameraSuccess = this.onCameraSuccess.bind(this);
     (window as any).onCameraFailure = this.onCameraFailure.bind(this);
+    (window as any).onMetadataReceived = this.onMetadataReceived.bind(this); // חשיפת הפונקציה החדשה
   }
 
   onCameraSuccess(): void {
@@ -34,6 +38,12 @@ export class AppComponent {
     alert(`מצלמה לא מחוברת / תקולה: ${errorMessage}`);
   }
 
+  // פונקציה חדשה לקבלת המטא-דאטה מ-Kotlin
+  onMetadataReceived(metadata: string): void {
+    console.log("Metadata received from Android:", metadata);
+    this.metadata = metadata; // שמור את המטא-דאטה במשתנה הקומפוננטה
+    this.cameraMessage = "מטא-דאטה התקבל בהצלחה.";
+  }
   onTagVideosClick(): void {
     console.log("Button clicked. Trying to call native Android code...");
 
@@ -52,3 +62,6 @@ export class AppComponent {
     }
   }
 }
+
+
+
