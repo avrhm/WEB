@@ -3,25 +3,26 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 0; /* שונה ל-0! אנדרואיד יטפל בריווח של סרגלי המערכת */
   background-color: #0d1b2a;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-sizing: border-box; /* חשוב מאוד כדי שה-padding לא ישבור את הגובה */
+  box-sizing: border-box; /* חשוב למודל הקופסה העקבי */
 }
 
-body {
-  /* נותן ריפוד פנימי כדי לדחוף את התוכן מהקצוות */
-  padding: 60px 20px; 
-}
+/* הוסר: ריווח ספציפי קודם מ-body */
+/* body {
+    padding: 60px 20px;
+} */
 
 /* --- קונטיינר פשוט ללא מיקום מיוחד --- */
 .container {
   /* מרכוז אופקי בלבד */
   margin: 0 auto;
+  /* הוסף ריווח עליון/תחתון כאן אם אתה עדיין רוצה ריווח כללי לתוכן */
+  padding: 30px 40px; /* השאר את הריווח הכללי הזה לתוכן בתוך הקונטיינר */
 
   /* עיצובים קוסמטיים שנשארים */
   background-color: #1b263b;
-  padding: 30px 40px;
   border-radius: 8px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
   text-align: center;
